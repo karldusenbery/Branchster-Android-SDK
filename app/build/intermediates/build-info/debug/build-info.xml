@@ -7,22 +7,22 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.4.2"
-    timestamp="1617830329972"
+    timestamp="1617830553487"
     token="1180816148589672014"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="620" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="102" />
+        duration="43" />
     <task
         name="verifier"
-        duration="117" />
+        duration="10" />
 
     <artifact
         location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
@@ -78,7 +78,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1617830329972"
+        timestamp="1617830553487"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_5.apk"

@@ -71,7 +71,7 @@ public class SplashActivity extends Activity {
             try {
                 String autoDeeplinkedValue = Branch.getInstance().getLatestReferringParams().getString("product_picture");
 
-                Toast.makeText(getApplicationContext(),"Launched by Branch on auto deep linking!\"\n" + "\"\\n\\n\" + autoDeeplinkedValue",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Launched by Branch on auto deep linking!" + "\n\n" + autoDeeplinkedValue,Toast.LENGTH_LONG).show();
 
             } catch (JSONException e) {
                 e.printStackTrace();
