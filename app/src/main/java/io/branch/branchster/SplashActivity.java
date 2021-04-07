@@ -5,10 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,11 +59,31 @@ public class SplashActivity extends Activity {
         //If a monster was linked to, open the viewer Activity to that Monster.
         Branch.sessionBuilder(this).withCallback(branchReferralInitListener).withData(getIntent() != null ? getIntent().getData() : null).init();
         proceedToAppTransparent();
+
+        // listener (within Main Activity's onStart)
+        Branch.sessionBuilder(this).withCallback(new Branch.BranchReferralInitListener() {
+            @Override
+            public void onInitFinished(JSONObject referringParams, BranchError error) {
+                if (error == null) {
+                    Log.i("BRANCH SDK", referringParams.toString());
+                } else {
+                    Log.i("BRANCH SDK", error.getMessage());
+                }
+            }
+        }).withData(this.getIntent().getData()).init();
+
+        // latest
+        JSONObject sessionParams = Branch.getInstance().getLatestReferringParams();
+
+        // first
+        JSONObject installParams = Branch.getInstance().getFirstReferringParams();
     }
+
 
     @Override
     public void onResume() {
         super.onResume();
+
     }
 
     @Override
@@ -72,11 +94,11 @@ public class SplashActivity extends Activity {
         // activity will skip onStart, handle this case with reInitSession
         Branch.sessionBuilder(this).withCallback(branchReferralInitListener).reInit();
     }
+
     private Branch.BranchReferralInitListener branchReferralInitListener = new Branch.BranchReferralInitListener() {
         @Override
         public void onInitFinished(JSONObject linkProperties, BranchError error) {
             // do stuff with deep link data (nav to page, display content, etc)
-
         }
     };
 

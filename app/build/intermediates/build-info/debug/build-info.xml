@@ -6,7 +6,7 @@
     density="560dpi"
     format="10"
     plugin-version="3.4.2"
-    timestamp="1617807477652"
+    timestamp="1617815356347"
     token="1180816148589672014"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -18,14 +18,11 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="549" />
+        duration="901" />
     <task
         name="verifier"
-        duration="324" />
+        duration="493" />
 
-    <artifact
-        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-        type="SPLIT" />
     <artifact
         location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
         type="SPLIT" />
@@ -57,6 +54,9 @@
         location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
         type="SPLIT" />
     <artifact
+        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+        type="SPLIT" />
+    <artifact
         location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
         type="SPLIT" />
     <artifact
@@ -65,11 +65,8 @@
 
     <build
         build-mode="FULL"
-        timestamp="1617807477652"
+        timestamp="1617815356347"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-            type="SPLIT" />
         <artifact
             location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
@@ -99,6 +96,9 @@
             type="SPLIT" />
         <artifact
             location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
