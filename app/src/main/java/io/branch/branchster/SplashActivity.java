@@ -3,6 +3,7 @@ package io.branch.branchster;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
@@ -105,6 +107,25 @@ public class SplashActivity extends Activity {
         @Override
         public void onInitFinished(JSONObject linkProperties, BranchError error) {
             // do stuff with deep link data (nav to page, display content, etc)
+            if (error == null) {
+
+                // option 1: log data
+                Log.i("BRANCH SDK", linkProperties.toString());
+
+                // option 2: save data to be used later
+                SharedPreferences preferences = SplashActivity.this.getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+                preferences.edit().putString("branchData", linkProperties.toString()).apply();
+
+                // option 3: navigate to page
+                Intent intent = new Intent(SplashActivity.this, MonsterViewerActivity.class);
+                startActivity(intent);
+
+                // option 4: display data
+                Toast.makeText(SplashActivity.this, linkProperties.toString(), Toast.LENGTH_LONG).show();
+
+            } else {
+                Log.i("BRANCH SDK", error.getMessage());
+            }
         }
     };
 
