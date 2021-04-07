@@ -17,6 +17,7 @@ import io.branch.branchster.fragment.InfoFragment;
 import io.branch.branchster.util.MonsterImageView;
 import io.branch.branchster.util.MonsterObject;
 import io.branch.branchster.util.MonsterPreferences;
+import io.branch.referral.Branch;
 
 public class MonsterViewerActivity extends FragmentActivity implements InfoFragment.OnFragmentInteractionListener {
     static final int SEND_SMS = 12345;
@@ -38,6 +39,10 @@ public class MonsterViewerActivity extends FragmentActivity implements InfoFragm
         monsterImageView_ = (MonsterImageView) findViewById(R.id.monster_img_view);
         monsterUrl = (TextView) findViewById(R.id.shareUrl);
         progressBar = findViewById(R.id.progress_bar);
+
+        // Custom events registration
+        Branch branch = Branch.getInstance(getApplicationContext());
+        branch.userCompletedAction("monster_view"); // Tracks that the user visited the monster view page
 
         // Change monster
         findViewById(R.id.cmdChange).setOnClickListener(new OnClickListener() {
