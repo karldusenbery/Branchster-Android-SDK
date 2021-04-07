@@ -61,6 +61,10 @@
                     android:host="dusenbery-alternate.app.link"
                     android:scheme="https" />
             </intent-filter>
+
+            <meta-data
+                android:name="io.branch.sdk.auto_link_keys"
+                android:value="product_picture" />
         </activity>
         <activity
             android:name="io.branch.branchster.MonsterViewerActivity"
