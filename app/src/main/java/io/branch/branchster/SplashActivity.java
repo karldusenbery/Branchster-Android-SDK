@@ -35,19 +35,6 @@ public class SplashActivity extends Activity {
     Context mContext;
     final int ANIM_DURATION = 1500;
 
-    //Branch Universal Object
-    /*
-    BranchUniversalObject buo = new BranchUniversalObject()
-            .setCanonicalIdentifier("content/12345")
-            .setTitle("My Content Title")
-            .setContentDescription("My Content Description")
-            .setContentImageUrl("https://lorempixel.com/400/400")
-            .setContentIndexingMode(BranchUniversalObject.CONTENT_INDEX_MODE.PUBLIC)
-            .setLocalIndexMode(BranchUniversalObject.CONTENT_INDEX_MODE.PUBLIC)
-            .setContentMetadata(new ContentMetadata().addCustomMetadata("key1", "value1"));
-    */
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,24 +57,6 @@ public class SplashActivity extends Activity {
         //If a monster was linked to, open the viewer Activity to that Monster.
         Branch.sessionBuilder(this).withCallback(branchReferralInitListener).withData(getIntent() != null ? getIntent().getData() : null).init();
         proceedToAppTransparent();
-
-        // listener to read deep link
-        Branch.sessionBuilder(this).withCallback(new Branch.BranchReferralInitListener() {
-            @Override
-            public void onInitFinished(JSONObject referringParams, BranchError error) {
-                if (error == null) {
-                    Log.i("BRANCH SDK", referringParams.toString());
-                } else {
-                    Log.i("BRANCH SDK", error.getMessage());
-                }
-            }
-        }).withData(this.getIntent().getData()).init();
-
-        // latest
-        JSONObject sessionParams = Branch.getInstance().getLatestReferringParams();
-
-        // first
-        JSONObject installParams = Branch.getInstance().getFirstReferringParams();
     }
 
     @Override
@@ -107,25 +76,7 @@ public class SplashActivity extends Activity {
         @Override
         public void onInitFinished(JSONObject linkProperties, BranchError error) {
             // do stuff with deep link data (nav to page, display content, etc)
-            if (error == null) {
 
-                // option 1: log data
-                Log.i("BRANCH SDK", linkProperties.toString());
-
-                // option 2: save data to be used later
-                SharedPreferences preferences = SplashActivity.this.getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-                preferences.edit().putString("branchData", linkProperties.toString()).apply();
-
-                // option 3: navigate to page
-                Intent intent = new Intent(SplashActivity.this, MonsterViewerActivity.class);
-                startActivity(intent);
-
-                // option 4: display data
-                Toast.makeText(SplashActivity.this, linkProperties.toString(), Toast.LENGTH_LONG).show();
-
-            } else {
-                Log.i("BRANCH SDK", error.getMessage());
-            }
         }
     };
 

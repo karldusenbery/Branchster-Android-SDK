@@ -285,23 +285,16 @@ public final class R {
      */
     public static final int activityChooserViewStyle=0x7f040021;
     /**
-     * The size of the ad. It must be one of BANNER, FULL_BANNER, LEADERBOARD,
-     * MEDIUM_RECTANGLE, SMART_BANNER, WIDE_SKYSCRAPER, or
-     * &lt;width&gt;x&lt;height&gt;.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int adSize=0x7f040022;
     /**
-     * A comma-separated list of the supported ad sizes. The sizes must be one of
-     * BANNER, FULL_BANNER, LEADERBOARD, MEDIUM_RECTANGLE, SMART_BANNER,
-     * WIDE_SKYSCRAPER, or &lt;width&gt;x&lt;height&gt;.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int adSizes=0x7f040023;
     /**
-     * The ad unit ID.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -342,7 +335,6 @@ public final class R {
      */
     public static final int alpha=0x7f04002a;
     /**
-     * Theme to be used for the Wallet selector
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -591,7 +583,6 @@ public final class R {
      */
     public static final int buttonTintMode=0x7f040048;
     /**
-     * The appearance of the buy button
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -605,9 +596,6 @@ public final class R {
      */
     public static final int buyButtonAppearance=0x7f040049;
     /**
-     * Height of the buy button. This includes an 8dp padding (4dp on each side) used for
-     * pressed and focused states of the button. The value can be a specific height, e.g.
-     * "48dp", or special values "match_parent" and "wrap_content".
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -625,7 +613,6 @@ public final class R {
      */
     public static final int buyButtonHeight=0x7f04004a;
     /**
-     * The text on the buy button
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -640,9 +627,6 @@ public final class R {
      */
     public static final int buyButtonText=0x7f04004b;
     /**
-     * Width of the buy button. This includes an 8dp padding (4dp on each side) used for
-     * pressed and focused states of the button. The value can be a specific width, e.g.
-     * "300dp", or special values "match_parent" and "wrap_content".
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -694,7 +678,6 @@ public final class R {
      */
     public static final int checkedTextViewStyle=0x7f040053;
     /**
-     * Whether or not this view should have a circular clip applied
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -1039,7 +1022,6 @@ public final class R {
      */
     public static final int elevation=0x7f040082;
     /**
-     * Google Wallet environment to use
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -1162,7 +1144,6 @@ public final class R {
      */
     public static final int foregroundInsidePadding=0x7f040090;
     /**
-     * Fragment mode
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -1175,7 +1156,6 @@ public final class R {
      */
     public static final int fragmentMode=0x7f040091;
     /**
-     * A style resource specifing attributes to customize the look and feel of WalletFragment
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1261,13 +1241,10 @@ public final class R {
      */
     public static final int iconifiedByDefault=0x7f04009e;
     /**
-     * The fixed aspect ratio to use in aspect ratio adjustments.
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
     public static final int imageAspectRatio=0x7f04009f;
     /**
-     * What kind of aspect ratio adjustment to do.  It must be one of "none", "adjust_width",
-     * or "adjust_height".
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -1596,7 +1573,6 @@ public final class R {
      */
     public static final int mapType=0x7f0400c6;
     /**
-     * Masked wallet details background
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1607,7 +1583,6 @@ public final class R {
      */
     public static final int maskedWalletDetailsBackground=0x7f0400c7;
     /**
-     * "Change" button background in masked wallet details view
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1618,7 +1593,6 @@ public final class R {
      */
     public static final int maskedWalletDetailsButtonBackground=0x7f0400c8;
     /**
-     * TextAppearance for the "Change" button in masked wallet details view
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1626,7 +1600,6 @@ public final class R {
      */
     public static final int maskedWalletDetailsButtonTextAppearance=0x7f0400c9;
     /**
-     * TextAppearance for headers describing masked wallet details
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1634,7 +1607,6 @@ public final class R {
      */
     public static final int maskedWalletDetailsHeaderTextAppearance=0x7f0400ca;
     /**
-     * Type of the wallet logo image in masked wallet details view
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -1647,14 +1619,12 @@ public final class R {
      */
     public static final int maskedWalletDetailsLogoImageType=0x7f0400cb;
     /**
-     * Color of the Google Wallet logo text in masked wallet details view
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int maskedWalletDetailsLogoTextColor=0x7f0400cc;
     /**
-     * TextAppearance for masked wallet details
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4637,9 +4607,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #AdsAttrs_adSize io.branch.branchster:adSize}</code></td><td>The size of the ad.</td></tr>
-     * <tr><td><code>{@link #AdsAttrs_adSizes io.branch.branchster:adSizes}</code></td><td>A comma-separated list of the supported ad sizes.</td></tr>
-     * <tr><td><code>{@link #AdsAttrs_adUnitId io.branch.branchster:adUnitId}</code></td><td>The ad unit ID.</td></tr>
+     * <tr><td><code>{@link #AdsAttrs_adSize io.branch.branchster:adSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AdsAttrs_adSizes io.branch.branchster:adSizes}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AdsAttrs_adUnitId io.branch.branchster:adUnitId}</code></td><td></td></tr>
      * </table>
      * @see #AdsAttrs_adSize
      * @see #AdsAttrs_adSizes
@@ -4649,11 +4619,8 @@ public final class R {
       0x7f040022, 0x7f040023, 0x7f040024
     };
     /**
-     * <p>
-     * @attr description
-     * The size of the ad. It must be one of BANNER, FULL_BANNER, LEADERBOARD,
-     * MEDIUM_RECTANGLE, SMART_BANNER, WIDE_SKYSCRAPER, or
-     * &lt;width&gt;x&lt;height&gt;.
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#adSize}
+     * attribute's value can be found in the {@link #AdsAttrs} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -4662,11 +4629,8 @@ public final class R {
      */
     public static final int AdsAttrs_adSize=0;
     /**
-     * <p>
-     * @attr description
-     * A comma-separated list of the supported ad sizes. The sizes must be one of
-     * BANNER, FULL_BANNER, LEADERBOARD, MEDIUM_RECTANGLE, SMART_BANNER,
-     * WIDE_SKYSCRAPER, or &lt;width&gt;x&lt;height&gt;.
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#adSizes}
+     * attribute's value can be found in the {@link #AdsAttrs} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -4675,9 +4639,8 @@ public final class R {
      */
     public static final int AdsAttrs_adSizes=1;
     /**
-     * <p>
-     * @attr description
-     * The ad unit ID.
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#adUnitId}
+     * attribute's value can be found in the {@link #AdsAttrs} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -8417,9 +8380,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #LoadingImageView_circleCrop io.branch.branchster:circleCrop}</code></td><td>Whether or not this view should have a circular clip applied</td></tr>
-     * <tr><td><code>{@link #LoadingImageView_imageAspectRatio io.branch.branchster:imageAspectRatio}</code></td><td>The fixed aspect ratio to use in aspect ratio adjustments.</td></tr>
-     * <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust io.branch.branchster:imageAspectRatioAdjust}</code></td><td>What kind of aspect ratio adjustment to do.</td></tr>
+     * <tr><td><code>{@link #LoadingImageView_circleCrop io.branch.branchster:circleCrop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_imageAspectRatio io.branch.branchster:imageAspectRatio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust io.branch.branchster:imageAspectRatioAdjust}</code></td><td></td></tr>
      * </table>
      * @see #LoadingImageView_circleCrop
      * @see #LoadingImageView_imageAspectRatio
@@ -8429,9 +8392,8 @@ public final class R {
       0x7f040054, 0x7f04009f, 0x7f0400a0
     };
     /**
-     * <p>
-     * @attr description
-     * Whether or not this view should have a circular clip applied
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#circleCrop}
+     * attribute's value can be found in the {@link #LoadingImageView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -8440,9 +8402,8 @@ public final class R {
      */
     public static final int LoadingImageView_circleCrop=0;
     /**
-     * <p>
-     * @attr description
-     * The fixed aspect ratio to use in aspect ratio adjustments.
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#imageAspectRatio}
+     * attribute's value can be found in the {@link #LoadingImageView} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -8450,10 +8411,8 @@ public final class R {
      */
     public static final int LoadingImageView_imageAspectRatio=1;
     /**
-     * <p>
-     * @attr description
-     * What kind of aspect ratio adjustment to do.  It must be one of "none", "adjust_width",
-     * or "adjust_height".
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#imageAspectRatioAdjust}
+     * attribute's value can be found in the {@link #LoadingImageView} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -11639,10 +11598,10 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #WalletFragmentOptions_appTheme io.branch.branchster:appTheme}</code></td><td>Theme to be used for the Wallet selector</td></tr>
-     * <tr><td><code>{@link #WalletFragmentOptions_environment io.branch.branchster:environment}</code></td><td>Google Wallet environment to use</td></tr>
-     * <tr><td><code>{@link #WalletFragmentOptions_fragmentMode io.branch.branchster:fragmentMode}</code></td><td>Fragment mode</td></tr>
-     * <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle io.branch.branchster:fragmentStyle}</code></td><td>A style resource specifing attributes to customize the look and feel of WalletFragment</td></tr>
+     * <tr><td><code>{@link #WalletFragmentOptions_appTheme io.branch.branchster:appTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentOptions_environment io.branch.branchster:environment}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentOptions_fragmentMode io.branch.branchster:fragmentMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle io.branch.branchster:fragmentStyle}</code></td><td></td></tr>
      * </table>
      * @see #WalletFragmentOptions_appTheme
      * @see #WalletFragmentOptions_environment
@@ -11653,9 +11612,8 @@ public final class R {
       0x7f04002b, 0x7f040083, 0x7f040091, 0x7f040092
     };
     /**
-     * <p>
-     * @attr description
-     * Theme to be used for the Wallet selector
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#appTheme}
+     * attribute's value can be found in the {@link #WalletFragmentOptions} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -11671,9 +11629,8 @@ public final class R {
      */
     public static final int WalletFragmentOptions_appTheme=0;
     /**
-     * <p>
-     * @attr description
-     * Google Wallet environment to use
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#environment}
+     * attribute's value can be found in the {@link #WalletFragmentOptions} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -11690,9 +11647,8 @@ public final class R {
      */
     public static final int WalletFragmentOptions_environment=1;
     /**
-     * <p>
-     * @attr description
-     * Fragment mode
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#fragmentMode}
+     * attribute's value can be found in the {@link #WalletFragmentOptions} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -11708,9 +11664,8 @@ public final class R {
      */
     public static final int WalletFragmentOptions_fragmentMode=2;
     /**
-     * <p>
-     * @attr description
-     * A style resource specifing attributes to customize the look and feel of WalletFragment
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#fragmentStyle}
+     * attribute's value can be found in the {@link #WalletFragmentOptions} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11727,17 +11682,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance io.branch.branchster:buyButtonAppearance}</code></td><td>The appearance of the buy button</td></tr>
-     * <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight io.branch.branchster:buyButtonHeight}</code></td><td>Height of the buy button.</td></tr>
-     * <tr><td><code>{@link #WalletFragmentStyle_buyButtonText io.branch.branchster:buyButtonText}</code></td><td>The text on the buy button</td></tr>
-     * <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth io.branch.branchster:buyButtonWidth}</code></td><td>Width of the buy button.</td></tr>
-     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground io.branch.branchster:maskedWalletDetailsBackground}</code></td><td>Masked wallet details background</td></tr>
-     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground io.branch.branchster:maskedWalletDetailsButtonBackground}</code></td><td>"Change" button background in masked wallet details view</td></tr>
-     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance io.branch.branchster:maskedWalletDetailsButtonTextAppearance}</code></td><td>TextAppearance for the "Change" button in masked wallet details view</td></tr>
-     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance io.branch.branchster:maskedWalletDetailsHeaderTextAppearance}</code></td><td>TextAppearance for headers describing masked wallet details</td></tr>
-     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType io.branch.branchster:maskedWalletDetailsLogoImageType}</code></td><td>Type of the wallet logo image in masked wallet details view</td></tr>
-     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor io.branch.branchster:maskedWalletDetailsLogoTextColor}</code></td><td>Color of the Google Wallet logo text in masked wallet details view</td></tr>
-     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance io.branch.branchster:maskedWalletDetailsTextAppearance}</code></td><td>TextAppearance for masked wallet details</td></tr>
+     * <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance io.branch.branchster:buyButtonAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight io.branch.branchster:buyButtonHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentStyle_buyButtonText io.branch.branchster:buyButtonText}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth io.branch.branchster:buyButtonWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground io.branch.branchster:maskedWalletDetailsBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground io.branch.branchster:maskedWalletDetailsButtonBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance io.branch.branchster:maskedWalletDetailsButtonTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance io.branch.branchster:maskedWalletDetailsHeaderTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType io.branch.branchster:maskedWalletDetailsLogoImageType}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor io.branch.branchster:maskedWalletDetailsLogoTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance io.branch.branchster:maskedWalletDetailsTextAppearance}</code></td><td></td></tr>
      * </table>
      * @see #WalletFragmentStyle_buyButtonAppearance
      * @see #WalletFragmentStyle_buyButtonHeight
@@ -11757,9 +11712,8 @@ public final class R {
       0x7f0400cb, 0x7f0400cc, 0x7f0400cd
     };
     /**
-     * <p>
-     * @attr description
-     * The appearance of the buy button
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#buyButtonAppearance}
+     * attribute's value can be found in the {@link #WalletFragmentStyle} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -11776,11 +11730,8 @@ public final class R {
      */
     public static final int WalletFragmentStyle_buyButtonAppearance=0;
     /**
-     * <p>
-     * @attr description
-     * Height of the buy button. This includes an 8dp padding (4dp on each side) used for
-     * pressed and focused states of the button. The value can be a specific height, e.g.
-     * "48dp", or special values "match_parent" and "wrap_content".
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#buyButtonHeight}
+     * attribute's value can be found in the {@link #WalletFragmentStyle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11801,9 +11752,8 @@ public final class R {
      */
     public static final int WalletFragmentStyle_buyButtonHeight=1;
     /**
-     * <p>
-     * @attr description
-     * The text on the buy button
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#buyButtonText}
+     * attribute's value can be found in the {@link #WalletFragmentStyle} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -11821,11 +11771,8 @@ public final class R {
      */
     public static final int WalletFragmentStyle_buyButtonText=2;
     /**
-     * <p>
-     * @attr description
-     * Width of the buy button. This includes an 8dp padding (4dp on each side) used for
-     * pressed and focused states of the button. The value can be a specific width, e.g.
-     * "300dp", or special values "match_parent" and "wrap_content".
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#buyButtonWidth}
+     * attribute's value can be found in the {@link #WalletFragmentStyle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11846,9 +11793,8 @@ public final class R {
      */
     public static final int WalletFragmentStyle_buyButtonWidth=3;
     /**
-     * <p>
-     * @attr description
-     * Masked wallet details background
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#maskedWalletDetailsBackground}
+     * attribute's value can be found in the {@link #WalletFragmentStyle} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11862,9 +11808,8 @@ public final class R {
      */
     public static final int WalletFragmentStyle_maskedWalletDetailsBackground=4;
     /**
-     * <p>
-     * @attr description
-     * "Change" button background in masked wallet details view
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#maskedWalletDetailsButtonBackground}
+     * attribute's value can be found in the {@link #WalletFragmentStyle} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11878,9 +11823,8 @@ public final class R {
      */
     public static final int WalletFragmentStyle_maskedWalletDetailsButtonBackground=5;
     /**
-     * <p>
-     * @attr description
-     * TextAppearance for the "Change" button in masked wallet details view
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#maskedWalletDetailsButtonTextAppearance}
+     * attribute's value can be found in the {@link #WalletFragmentStyle} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11891,9 +11835,8 @@ public final class R {
      */
     public static final int WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance=6;
     /**
-     * <p>
-     * @attr description
-     * TextAppearance for headers describing masked wallet details
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#maskedWalletDetailsHeaderTextAppearance}
+     * attribute's value can be found in the {@link #WalletFragmentStyle} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11904,9 +11847,8 @@ public final class R {
      */
     public static final int WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance=7;
     /**
-     * <p>
-     * @attr description
-     * Type of the wallet logo image in masked wallet details view
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#maskedWalletDetailsLogoImageType}
+     * attribute's value can be found in the {@link #WalletFragmentStyle} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -11922,9 +11864,8 @@ public final class R {
      */
     public static final int WalletFragmentStyle_maskedWalletDetailsLogoImageType=8;
     /**
-     * <p>
-     * @attr description
-     * Color of the Google Wallet logo text in masked wallet details view
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#maskedWalletDetailsLogoTextColor}
+     * attribute's value can be found in the {@link #WalletFragmentStyle} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -11934,9 +11875,8 @@ public final class R {
      */
     public static final int WalletFragmentStyle_maskedWalletDetailsLogoTextColor=9;
     /**
-     * <p>
-     * @attr description
-     * TextAppearance for masked wallet details
+     * <p>This symbol is the offset where the {@link io.branch.branchster.R.attr#maskedWalletDetailsTextAppearance}
+     * attribute's value can be found in the {@link #WalletFragmentStyle} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
