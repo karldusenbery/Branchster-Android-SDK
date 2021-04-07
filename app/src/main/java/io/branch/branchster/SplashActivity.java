@@ -56,16 +56,16 @@ public class SplashActivity extends Activity {
     protected void onStart() {
         super.onStart();
         //Initialize Branch session.
+        Branch.getInstance().initSession(branchReferralInitListener, this.getIntent().getData(), this);
+
         //If a monster was linked to, open the viewer Activity to that Monster.
         Branch.sessionBuilder(this).withCallback(branchReferralInitListener).withData(getIntent() != null ? getIntent().getData() : null).init();
         proceedToAppTransparent();
     }
 
-
     @Override
     public void onResume() {
         super.onResume();
-
     }
 
     @Override
@@ -112,9 +112,7 @@ public class SplashActivity extends Activity {
         animSlideIn.setDuration(ANIM_DURATION);
         animSlideIn.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
+            public void onAnimationStart(Animation animation) { }
 
             @Override
             public void onAnimationEnd(Animation animation) {
