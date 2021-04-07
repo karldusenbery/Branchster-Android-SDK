@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -12,12 +13,16 @@ import android.widget.TextView;
 
 import org.json.JSONObject;
 
+import java.util.Calendar;
+
 import io.branch.indexing.BranchUniversalObject;
 import io.branch.branchster.util.MonsterPreferences;
 import io.branch.referral.Branch;
 import io.branch.referral.BranchError;
 import io.branch.referral.util.ContentMetadata;
 import io.branch.referral.util.LinkProperties;
+
+import static io.branch.referral.Defines.Jsonkey.SDK;
 
 public class SplashActivity extends Activity {
 
@@ -29,6 +34,7 @@ public class SplashActivity extends Activity {
     final int ANIM_DURATION = 1500;
 
     //Branch Universal Object
+    /*
     BranchUniversalObject buo = new BranchUniversalObject()
             .setCanonicalIdentifier("content/12345")
             .setTitle("My Content Title")
@@ -37,6 +43,8 @@ public class SplashActivity extends Activity {
             .setContentIndexingMode(BranchUniversalObject.CONTENT_INDEX_MODE.PUBLIC)
             .setLocalIndexMode(BranchUniversalObject.CONTENT_INDEX_MODE.PUBLIC)
             .setContentMetadata(new ContentMetadata().addCustomMetadata("key1", "value1"));
+    */
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +68,24 @@ public class SplashActivity extends Activity {
         //If a monster was linked to, open the viewer Activity to that Monster.
         Branch.sessionBuilder(this).withCallback(branchReferralInitListener).withData(getIntent() != null ? getIntent().getData() : null).init();
         proceedToAppTransparent();
+
+        // listener to read deep link
+        Branch.sessionBuilder(this).withCallback(new Branch.BranchReferralInitListener() {
+            @Override
+            public void onInitFinished(JSONObject referringParams, BranchError error) {
+                if (error == null) {
+                    Log.i("BRANCH SDK", referringParams.toString());
+                } else {
+                    Log.i("BRANCH SDK", error.getMessage());
+                }
+            }
+        }).withData(this.getIntent().getData()).init();
+
+        // latest
+        JSONObject sessionParams = Branch.getInstance().getLatestReferringParams();
+
+        // first
+        JSONObject installParams = Branch.getInstance().getFirstReferringParams();
     }
 
     @Override
