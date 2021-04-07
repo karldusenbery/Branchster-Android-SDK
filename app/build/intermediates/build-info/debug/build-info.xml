@@ -2,26 +2,27 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="30"
-    build-mode="FULL"
+    build-mode="COLD"
     density="560dpi"
     format="10"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.4.2"
-    timestamp="1617828701319"
+    timestamp="1617830329972"
     token="1180816148589672014"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="620" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="2157" />
+        duration="102" />
     <task
         name="verifier"
-        duration="121" />
+        duration="117" />
 
     <artifact
         location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
@@ -29,39 +30,6 @@
     <artifact
         location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
-    <artifact
-        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
 
     <build
         build-mode="FULL"
@@ -106,6 +74,18 @@
         <artifact
             location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1617830329972"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Karl\Desktop\Branch.io\Branchster-Android-SDK\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

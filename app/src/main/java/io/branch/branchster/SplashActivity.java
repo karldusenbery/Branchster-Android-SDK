@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Calendar;
@@ -66,6 +67,20 @@ public class SplashActivity extends Activity {
     @Override
     public void onResume() {
         super.onResume();
+        if (Branch.isAutoDeepLinkLaunch(this)) {
+            try {
+                String autoDeeplinkedValue = Branch.getInstance().getLatestReferringParams().getString("product_picture");
+
+                Toast.makeText(getApplicationContext(),"Launched by Branch on auto deep linking!\"\n" + "\"\\n\\n\" + autoDeeplinkedValue",Toast.LENGTH_LONG).show();
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        } else {
+
+            Toast.makeText(getApplicationContext(),"Launched by normal application flow",Toast.LENGTH_LONG).show();
+
+        }
     }
 
     @Override
