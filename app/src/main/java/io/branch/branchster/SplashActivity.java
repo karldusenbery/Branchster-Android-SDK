@@ -59,24 +59,6 @@ public class SplashActivity extends Activity {
         //If a monster was linked to, open the viewer Activity to that Monster.
         Branch.sessionBuilder(this).withCallback(branchReferralInitListener).withData(getIntent() != null ? getIntent().getData() : null).init();
         proceedToAppTransparent();
-
-        // listener (within Main Activity's onStart)
-        Branch.sessionBuilder(this).withCallback(new Branch.BranchReferralInitListener() {
-            @Override
-            public void onInitFinished(JSONObject referringParams, BranchError error) {
-                if (error == null) {
-                    Log.i("BRANCH SDK", referringParams.toString());
-                } else {
-                    Log.i("BRANCH SDK", error.getMessage());
-                }
-            }
-        }).withData(this.getIntent().getData()).init();
-
-        // latest
-        JSONObject sessionParams = Branch.getInstance().getLatestReferringParams();
-
-        // first
-        JSONObject installParams = Branch.getInstance().getFirstReferringParams();
     }
 
 
