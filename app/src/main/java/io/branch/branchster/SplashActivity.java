@@ -10,7 +10,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.json.JSONObject;
+
+import io.branch.indexing.BranchUniversalObject;
 import io.branch.branchster.util.MonsterPreferences;
+import io.branch.referral.Branch;
+import io.branch.referral.BranchError;
+import io.branch.referral.util.LinkProperties;
 
 public class SplashActivity extends Activity {
 
@@ -39,8 +45,9 @@ public class SplashActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        // TODO: Initialize Branch session.
-        // TODO: If a monster was linked to, open the viewer Activity to that Monster.
+        //Initialize Branch session.
+        //If a monster was linked to, open the viewer Activity to that Monster.
+        Branch.sessionBuilder(this).withCallback(branchReferralInitListener).withData(getIntent() != null ? getIntent().getData() : null).init();
         proceedToAppTransparent();
     }
 
@@ -51,8 +58,18 @@ public class SplashActivity extends Activity {
 
     @Override
     public void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
         this.setIntent(intent);
+        // if activity is in foreground (or in backstack but partially visible) launching the same
+        // activity will skip onStart, handle this case with reInitSession
+        Branch.sessionBuilder(this).withCallback(branchReferralInitListener).reInit();
     }
+    private Branch.BranchReferralInitListener branchReferralInitListener = new Branch.BranchReferralInitListener() {
+        @Override
+        public void onInitFinished(JSONObject linkProperties, BranchError error) {
+            // do stuff with deep link data (nav to page, display content, etc)
+        }
+    };
 
     /**
      * Opens the appropriate next Activity, based on whether a Monster has been saved in {@link MonsterPreferences}.
