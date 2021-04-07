@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
+import org.json.JSONObject;
+
 import io.branch.branchster.fragment.InfoFragment;
 import io.branch.branchster.util.MonsterImageView;
 import io.branch.branchster.util.MonsterObject;
@@ -42,7 +44,7 @@ public class MonsterViewerActivity extends FragmentActivity implements InfoFragm
 
         // Custom events registration
         Branch branch = Branch.getInstance(getApplicationContext());
-        branch.userCompletedAction("monster_view"); // Tracks that the user visited the monster view page
+        branch.userCompletedAction("monster_view", (JSONObject)myMonsterObject.monsterMetaData()); // Tracks that the user visited the monster view page, this time with state information.
 
         // Change monster
         findViewById(R.id.cmdChange).setOnClickListener(new OnClickListener() {
