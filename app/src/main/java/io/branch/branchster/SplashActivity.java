@@ -16,6 +16,7 @@ import io.branch.indexing.BranchUniversalObject;
 import io.branch.branchster.util.MonsterPreferences;
 import io.branch.referral.Branch;
 import io.branch.referral.BranchError;
+import io.branch.referral.util.ContentMetadata;
 import io.branch.referral.util.LinkProperties;
 
 public class SplashActivity extends Activity {
@@ -26,6 +27,16 @@ public class SplashActivity extends Activity {
     ImageView imgSplash1, imgSplash2;
     Context mContext;
     final int ANIM_DURATION = 1500;
+
+    //Branch Universal Object
+    BranchUniversalObject buo = new BranchUniversalObject()
+            .setCanonicalIdentifier("content/12345")
+            .setTitle("My Content Title")
+            .setContentDescription("My Content Description")
+            .setContentImageUrl("https://lorempixel.com/400/400")
+            .setContentIndexingMode(BranchUniversalObject.CONTENT_INDEX_MODE.PUBLIC)
+            .setLocalIndexMode(BranchUniversalObject.CONTENT_INDEX_MODE.PUBLIC)
+            .setContentMetadata(new ContentMetadata().addCustomMetadata("key1", "value1"));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
