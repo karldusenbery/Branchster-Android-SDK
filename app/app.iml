@@ -117,12 +117,15 @@
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: com.android.support:design:25.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.annotation:annotation:1.1.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:animated-vector-drawable:25.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-fragment:25.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7:25.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-vector-drawable:25.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:recyclerview-v7:25.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: io.branch.sdk.android:library:5.0.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-core-utils:25.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.installreferrer:installreferrer:1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:transition:25.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services:6.5.87@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-compat:25.2.0@aar" level="project" />
