@@ -6,6 +6,8 @@ import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -19,7 +21,13 @@ import io.branch.branchster.fragment.InfoFragment;
 import io.branch.branchster.util.MonsterImageView;
 import io.branch.branchster.util.MonsterObject;
 import io.branch.branchster.util.MonsterPreferences;
+import io.branch.indexing.BranchUniversalObject;
 import io.branch.referral.Branch;
+import io.branch.referral.util.ContentMetadata;
+
+import static io.branch.branchster.util.MonsterPreferences.KEY_MONSTER_DESCRIPTION;
+import static io.branch.branchster.util.MonsterPreferences.KEY_MONSTER_IMAGE;
+import static io.branch.branchster.util.MonsterPreferences.KEY_MONSTER_NAME;
 
 public class MonsterViewerActivity extends FragmentActivity implements InfoFragment.OnFragmentInteractionListener {
     static final int SEND_SMS = 12345;
@@ -42,9 +50,13 @@ public class MonsterViewerActivity extends FragmentActivity implements InfoFragm
         monsterUrl = (TextView) findViewById(R.id.shareUrl);
         progressBar = findViewById(R.id.progress_bar);
 
+
+
         // Custom events registration
         Branch branch = Branch.getInstance(getApplicationContext());
         branch.userCompletedAction("monster_view", (JSONObject)myMonsterObject.monsterMetaData()); // Tracks that the user visited the monster view page, this time with state information.
+
+
 
         // Change monster
         findViewById(R.id.cmdChange).setOnClickListener(new OnClickListener() {
@@ -104,6 +116,31 @@ public class MonsterViewerActivity extends FragmentActivity implements InfoFragm
         } else {
             Log.e(TAG, "Monster is null. Unable to view monster");
         }
+
+        // Asynchronous method
+        HandlerThread ht = new HandlerThread("MyHandlerThread");
+        ht.start();
+        Handler handler = new Handler(ht.getLooper());
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                // your async code goes here.
+
+                //Create a Content Reference
+                BranchUniversalObject buo = new BranchUniversalObject()
+                        .setTitle(KEY_MONSTER_NAME)
+                        .setContentDescription(KEY_MONSTER_DESCRIPTION)
+                        .setContentImageUrl(KEY_MONSTER_IMAGE)
+                        .setContentIndexingMode(BranchUniversalObject.CONTENT_INDEX_MODE.PUBLIC)
+                        .setLocalIndexMode(BranchUniversalObject.CONTENT_INDEX_MODE.PUBLIC)
+                        .setContentMetadata(new ContentMetadata().addCustomMetadata("key1", "value1"));
+            }
+        };
+        handler.post(runnable);
+        // End Asynchronous method
+
+
+
     }
 
     /**

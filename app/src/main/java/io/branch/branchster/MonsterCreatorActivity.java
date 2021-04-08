@@ -50,6 +50,7 @@ public class MonsterCreatorActivity extends Activity {
         monsterImageView_.setMonster(latestMonsterObj);
         editName.setText(latestMonsterObj.getMonsterName());
 
+
         // Custom events registration
         Branch branch = Branch.getInstance(getApplicationContext());
         branch.userCompletedAction("monster_edit"); // Tracks that the user visited the monster edit page
