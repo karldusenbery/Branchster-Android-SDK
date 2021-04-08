@@ -145,6 +145,7 @@ public class MonsterViewerActivity extends FragmentActivity implements InfoFragm
             public void onLinkCreate(String url, BranchError error) {
                 if (error == null) {
                     Log.i("BRANCH SDK", "got my Branch link to share: " + url);
+                    monsterUrl.setText(url);
                 }
             }
         });
