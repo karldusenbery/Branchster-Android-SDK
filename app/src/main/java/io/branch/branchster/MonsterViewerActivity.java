@@ -54,7 +54,7 @@ public class MonsterViewerActivity extends FragmentActivity implements InfoFragm
 
         // Custom events registration
         Branch branch = Branch.getInstance(getApplicationContext());
-        branch.userCompletedAction("monster_view", (JSONObject)myMonsterObject.monsterMetaData()); // Tracks that the user visited the monster view page, this time with state information.
+        //branch.userCompletedAction("monster_view", (JSONObject)myMonsterObject.monsterMetaData()); // Tracks that the user visited the monster view page, this time with state information.
 
 
 
