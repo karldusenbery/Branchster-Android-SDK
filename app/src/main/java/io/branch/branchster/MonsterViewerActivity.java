@@ -17,13 +17,17 @@ import android.widget.TextView;
 
 import org.json.JSONObject;
 
+import java.util.Calendar;
+
 import io.branch.branchster.fragment.InfoFragment;
 import io.branch.branchster.util.MonsterImageView;
 import io.branch.branchster.util.MonsterObject;
 import io.branch.branchster.util.MonsterPreferences;
 import io.branch.indexing.BranchUniversalObject;
 import io.branch.referral.Branch;
+import io.branch.referral.BranchError;
 import io.branch.referral.util.ContentMetadata;
+import io.branch.referral.util.LinkProperties;
 
 import static io.branch.branchster.util.MonsterPreferences.KEY_MONSTER_DESCRIPTION;
 import static io.branch.branchster.util.MonsterPreferences.KEY_MONSTER_IMAGE;
@@ -117,27 +121,33 @@ public class MonsterViewerActivity extends FragmentActivity implements InfoFragm
             Log.e(TAG, "Monster is null. Unable to view monster");
         }
 
-        // Asynchronous method
-        HandlerThread ht = new HandlerThread("MyHandlerThread");
-        ht.start();
-        Handler handler = new Handler(ht.getLooper());
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                // your async code goes here.
+        //Create a Content Reference
+        BranchUniversalObject buo = new BranchUniversalObject()
+                .setTitle(KEY_MONSTER_NAME)
+                .setContentDescription(KEY_MONSTER_DESCRIPTION)
+                .setContentImageUrl(KEY_MONSTER_IMAGE)
+                .setContentIndexingMode(BranchUniversalObject.CONTENT_INDEX_MODE.PUBLIC)
+                .setLocalIndexMode(BranchUniversalObject.CONTENT_INDEX_MODE.PUBLIC)
+                .setContentMetadata(new ContentMetadata().addCustomMetadata("key1", "value1"));
 
-                //Create a Content Reference
-                BranchUniversalObject buo = new BranchUniversalObject()
-                        .setTitle(KEY_MONSTER_NAME)
-                        .setContentDescription(KEY_MONSTER_DESCRIPTION)
-                        .setContentImageUrl(KEY_MONSTER_IMAGE)
-                        .setContentIndexingMode(BranchUniversalObject.CONTENT_INDEX_MODE.PUBLIC)
-                        .setLocalIndexMode(BranchUniversalObject.CONTENT_INDEX_MODE.PUBLIC)
-                        .setContentMetadata(new ContentMetadata().addCustomMetadata("key1", "value1"));
+        // Create Deep Link
+        LinkProperties lp = new LinkProperties()
+                .setChannel("facebook")
+                .setFeature("sharing")
+                .setCampaign("content 123 launch")
+                .setStage("new user")
+                .addControlParameter("$desktop_url", "http://example.com/home")
+                .addControlParameter("custom", "data")
+                .addControlParameter("custom_random", Long.toString(Calendar.getInstance().getTimeInMillis()));
+
+        buo.generateShortUrl(this, lp, new Branch.BranchLinkCreateListener() {
+            @Override
+            public void onLinkCreate(String url, BranchError error) {
+                if (error == null) {
+                    Log.i("BRANCH SDK", "got my Branch link to share: " + url);
+                }
             }
-        };
-        handler.post(runnable);
-        // End Asynchronous method
+        });
 
 
 
