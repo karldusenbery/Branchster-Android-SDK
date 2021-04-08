@@ -44,6 +44,7 @@ public class MonsterViewerActivity extends FragmentActivity implements InfoFragm
 
     MonsterImageView monsterImageView_;
     MonsterObject myMonsterObject;
+    String myMonsterURL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,6 +147,7 @@ public class MonsterViewerActivity extends FragmentActivity implements InfoFragm
                 if (error == null) {
                     Log.i("BRANCH SDK", "got my Branch link to share: " + url);
                     monsterUrl.setText(url);
+                    myMonsterURL = url;
                 }
             }
         });
@@ -160,7 +162,7 @@ public class MonsterViewerActivity extends FragmentActivity implements InfoFragm
     private void shareMyMonster() {
         progressBar.setVisibility(View.VISIBLE);
 
-        String url = "http://example.com"; // TODO: Replace with Branch-generated shortUrl
+        String url = myMonsterURL; // TODO: Replace with Branch-generated shortUrl
 
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("text/plain");
